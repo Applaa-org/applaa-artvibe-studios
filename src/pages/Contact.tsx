@@ -31,7 +31,7 @@ export default function Contact() {
 
   const getCurrentStatus = () => {
     const now = new Date();
-    const currentDay = now.toLocaleLowerCase().slice(0, 3);
+    const currentDay = now.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
     const currentTime = now.getHours() * 60 + now.getMinutes();
     
     const todayHours = openingHours[currentDay as keyof typeof openingHours];
@@ -280,7 +280,8 @@ export default function Contact() {
                 <div className="space-y-4">
                   {Object.entries(openingHours).map(([day, hours]) => {
                     const dayName = day.charAt(0).toUpperCase() + day.slice(1);
-                    const isToday = new Date().toLocaleLowerCase().slice(0, 3) === day;
+                    const currentDayName = new Date().toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
+                    const isToday = day === currentDayName;
                     
                     return (
                       <div key={day} className={`flex items-center justify-between p-4 rounded-lg ${isToday ? 'bg-gold-50 border border-gold-200' : 'bg-gray-50'}`}>

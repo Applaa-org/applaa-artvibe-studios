@@ -160,15 +160,15 @@ export default function Footer() {
                 </Badge>
               </div>
               <div className="flex space-x-4 text-sm">
-                <Link to="/privacy" className="text-gray-400 hover:text-gold-500 transition-colors">
+                <a href="/privacy" className="text-gray-400 hover:text-gold-500 transition-colors">
                   Privacy Policy
-                </Link>
-                <Link to="/terms" className="text-gray-400 hover:text-gold-500 transition-colors">
+                </a>
+                <a href="/terms" className="text-gray-400 hover:text-gold-500 transition-colors">
                   Terms of Service
-                </Link>
-                <Link to="/cookies" className="text-gray-400 hover:text-gold-500 transition-colors">
+                </a>
+                <a href="/cookies" className="text-gray-400 hover:text-gold-500 transition-colors">
                   Cookie Policy
-                </Link>
+                </a>
               </div>
             </div>
           </div>
